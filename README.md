@@ -73,7 +73,8 @@ downsampling_fasta= \ (reference fasta file with short amplicons)
 reads_per_amplicon=1000 \ (number of reads to extract mapping to each amplicon)
 reads_per_sample= \ (number of total reads to extract, if reads_per_amplicon is left empty)
 minimum_variant_percentage= \ (min percent of variants to include in vcf)
-minimum_read_length= (min length of a read so you get rid of small junk)
+minimum_read_length= (min length of a read so you get rid of small junk) \ 
+minimum_coverage= (min number of reads covering a basepair)
 ```
 Here is an example set of commands to use if you **do not** have a reference fasta file for downsampling and you have the fastq files located WITHIN the directory where you opened the Docker container
 
@@ -88,8 +89,9 @@ ncbi_accession=MN908947.3 \
 downsampling_fasta= \
 reads_per_amplicon=1000 \
 reads_per_sample= \
-minimum_variant_percentage=0.05 \
-minimum_read_length=100
+minimum_variant_percentage=0.03 \
+minimum_read_length=100 \ 
+minimum_coverage=10
 ```
 
 ### running the Zequencer with a pre-determined reference file of amplicon sequences 
@@ -118,7 +120,8 @@ downsampling_fasta= \ (reference fasta file with short amplicons)
 reads_per_amplicon=1000 \ (number of reads to extract mapping to each amplicon)
 reads_per_sample= \ (number of total reads to extract, if reads_per_amplicon is left empty)
 minimum_variant_percentage= \ (min percent of variants to include in vcf)
-minimum_read_length= (min length of a read so you get rid of small junk)
+minimum_read_length= (min length of a read so you get rid of small junk) \ 
+minimum_coverage= (min number of reads covering a basepair)
 ```
 Here is an example set of commands to use if you have a reference fasta file for downsampling and you have the fastq files located WITHIN the directory where you opened the Docker container
 
@@ -133,6 +136,7 @@ ncbi_accession=MN908947.3 \
 downsampling_fasta=amplicons.fasta \
 reads_per_amplicon=1000 \
 reads_per_sample= \
-minimum_variant_percentage=0.05 \
-minimum_read_length=100
+minimum_variant_percentage=0.03 \
+minimum_read_length=100 \ 
+minimum_coverage=10
 ```
