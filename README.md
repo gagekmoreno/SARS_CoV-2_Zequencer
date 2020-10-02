@@ -67,7 +67,8 @@ reads_per_amplicon=1000 \ (number of reads to extract mapping to each amplicon)
 reads_per_sample= \ (number of total reads to extract, if reads_per_amplicon is left empty)
 minimum_variant_percentage= \ (min percent of variants to include in vcf)
 minimum_read_length= (min length of a read so you get rid of small junk) \ 
-minimum_coverage= (min number of reads covering a basepair)
+minimum_coverage= (min number of reads covering a basepair) \ 
+--cores 4
 ```
 Here is an example set of commands to use if you **do not** have a reference fasta file for downsampling and you have the fastq files located WITHIN the directory where you opened the Docker container
 
@@ -84,7 +85,8 @@ reads_per_amplicon= \
 reads_per_sample=10000000 \ #more reads than you'd have per sample so you're not missing any 
 minimum_variant_percentage=0.03 \
 minimum_read_length=100 \ 
-minimum_coverage=10
+minimum_coverage=10 \ 
+--cores 4
 ```
 
 ### running the Zequencer with a pre-determined reference file of amplicon sequences 
@@ -108,7 +110,8 @@ reads_per_amplicon=1000 \ (number of reads to extract mapping to each amplicon)
 reads_per_sample= \ (number of total reads to extract, if reads_per_amplicon is left empty)
 minimum_variant_percentage= \ (min percent of variants to include in vcf)
 minimum_read_length= (min length of a read so you get rid of small junk) \ 
-minimum_coverage= (min number of reads covering a basepair)
+minimum_coverage= (min number of reads covering a basepair) \ 
+--cores 4
 ```
 Here is an example set of commands to use if you have a reference fasta file for downsampling and you have the fastq files located WITHIN the directory where you opened the Docker container
 
@@ -125,5 +128,6 @@ reads_per_amplicon=1000 \
 reads_per_sample= \
 minimum_variant_percentage=0.03 \
 minimum_read_length=100 \ 
-minimum_coverage=10
+minimum_coverage=10 \ 
+--cores 4
 ```
