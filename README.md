@@ -9,12 +9,12 @@ Here I have repurposed this tool to analyze SARS-CoV-2 tiled amplicon sequencing
 
 The Zequencer folder contains binaries for necessary processing applications compiled for OSX 10.12:
 
-+ bbmap_36.86
++ bbmap_36.87
 + samtools
 + snpEff
 
 Zequencer is written in Python3 and uses dependencies by running the following docker container 
- `docker run -it -v $(pwd):/scratch -w /scratch gkmoreno/sars2_zequencer:v2 /bin/bash`
+ `docker run -it -v $(pwd):/scratch -w /scratch gkmoreno/sars2_zequencer:v3 /bin/bash`
  
 ## running zequencer 
 Step 1: Download the Docker Image
@@ -26,7 +26,7 @@ Step 1: Download the Docker Image
 + To pull the docker image, just run the following in your terminal window:
 
 ```
-docker pull gkmoreno/sars2_zequencer:v2
+docker pull gkmoreno/sars2_zequencer:v3
 ```
 
 + This will pull the image to Docker that is on your computer. It does not matter the directory in which you are located to do the Docker pull, as long as you are NOT located inside a Docker container.  
@@ -42,7 +42,7 @@ Step 3: Run the Docker image to open the container.
 ```bash
 docker run --user $(id -u):$(id -g) \
 -it -v $(pwd):/scratch -w /scratch \
-gkmoreno/sars2_zequencer:v2 \
+gkmoreno/sars2_zequencer:v3 \
 /bin/bash
 ```
 
