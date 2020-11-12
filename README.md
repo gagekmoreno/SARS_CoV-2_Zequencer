@@ -26,7 +26,7 @@ Step 1: Download the Docker Image
 + To pull the docker image, just run the following in your terminal window:
 
 ```
-docker pull gkmoreno/sars2_zequencer:v3
+docker pull gkmoreno/sars2_zequencer:v3.1
 ```
 
 + This will pull the image to Docker that is on your computer. It does not matter the directory in which you are located to do the Docker pull, as long as you are NOT located inside a Docker container.  
@@ -42,7 +42,7 @@ Step 3: Run the Docker image to open the container.
 ```bash
 docker run --user $(id -u):$(id -g) \
 -it -v $(pwd):/scratch -w /scratch \
-gkmoreno/sars2_zequencer:v3 \
+gkmoreno/sars2_zequencer:v3.1 \
 /bin/bash
 ```
 
